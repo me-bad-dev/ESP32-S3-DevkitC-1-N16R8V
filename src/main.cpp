@@ -2,6 +2,7 @@
 #include <FastLED.h>
 
 #define NUM_LEDS 1
+#define LED_DRIVER_PIN 48
 CRGB leds[NUM_LEDS];
 
 void setup() 
@@ -11,7 +12,7 @@ void setup()
   Serial.print(ESP.getFlashChipSize()/1024/1024);
   Serial.println("MB");
 
-  FastLED.addLeds<NEOPIXEL, 48>(leds, NUM_LEDS);
+  FastLED.addLeds<NEOPIXEL, LED_DRIVER_PIN>(leds, NUM_LEDS);
 }
 
 void loop() 
