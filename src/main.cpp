@@ -19,15 +19,8 @@ void setup()
 
 void loop() 
 {
-  /* Rainbow effect for onboard addressable led */
-  neopixelWrite(RGB_BUILTIN,RGB_BRIGHTNESS,0,0); 
-  delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,RGB_BRIGHTNESS,0);
-  delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,0,RGB_BRIGHTNESS); 
-  delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,0,0);
-  delay(1000);
+  /* Rainbow effect for onboard addressable RGBW LED */
+  /* If the RGBW LED is not working, inspect the soldering pads on the board marked RGB, the pads need to be connected by soldering them together */
 
   for (int i=0; i<=255;i++) 
   {
