@@ -1,8 +1,10 @@
 #include <Arduino.h>
 #include <FastLED.h>
 
+//Onboard addressable led config
 #define NUM_LEDS 1
-#define LED_DRIVER_PIN 48
+#define LED_DRIVER_PIN 48 //The initial board version uses GPIO48, whereas v1.1 uses GPIO38
+
 CRGB leds[NUM_LEDS];
 
 void setup() 
@@ -17,14 +19,14 @@ void setup()
 
 void loop() 
 {
-  
-  neopixelWrite(RGB_BUILTIN,RGB_BRIGHTNESS,0,0); // Red
+  /* Rainbow effect for onboard addressable led */
+  neopixelWrite(RGB_BUILTIN,RGB_BRIGHTNESS,0,0); 
   delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,RGB_BRIGHTNESS,0); // Green
+  neopixelWrite(RGB_BUILTIN,0,RGB_BRIGHTNESS,0);
   delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,0,RGB_BRIGHTNESS); // Blue
+  neopixelWrite(RGB_BUILTIN,0,0,RGB_BRIGHTNESS); 
   delay(1000);
-  neopixelWrite(RGB_BUILTIN,0,0,0); // Off / black
+  neopixelWrite(RGB_BUILTIN,0,0,0);
   delay(1000);
 
   for (int i=0; i<=255;i++) 
