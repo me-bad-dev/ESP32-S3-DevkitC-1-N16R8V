@@ -17,7 +17,7 @@ void setup()
 
 void loop() 
 {
-  /*
+  
   neopixelWrite(RGB_BUILTIN,RGB_BRIGHTNESS,0,0); // Red
   delay(1000);
   neopixelWrite(RGB_BUILTIN,0,RGB_BRIGHTNESS,0); // Green
@@ -26,12 +26,11 @@ void loop()
   delay(1000);
   neopixelWrite(RGB_BUILTIN,0,0,0); // Off / black
   delay(1000);
-  */
 
   for (int i=0; i<=255;i++) 
   {
     leds[0] = CHSV( i, 255, 100);
     FastLED.show();
-    delay(16);
+    delay(15);
   }
 }
