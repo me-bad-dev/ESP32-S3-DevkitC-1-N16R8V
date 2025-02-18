@@ -4,4 +4,4 @@ This repository contains the board configuration file (`esp32-s3-devkitc-1-n16r8
 
 ## Getting Started
 - Clone & open this repository in PlatformIO.
-- Compime & upload..
+- Compile & upload..
